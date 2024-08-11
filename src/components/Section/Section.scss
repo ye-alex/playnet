@@ -2,8 +2,8 @@
 
 .content-section {
   z-index: 1;
-  height: 100vh;
   display: flex;
+  min-height: 100vh;
   position: relative;
   align-items: center;
 
