@@ -1,0 +1,118 @@
+:root {
+  // Can be overridden with window.innerHeight using initStarterkit - fixes issue on Safari iPhone with no physical home button
+  --viewport-height: 100vh;
+
+  // Sizing system - key on the left describes size in pixels
+  --size-2: 0.125rem;
+  --size-3: 0.1875rem;
+  --size-4: 0.25rem;
+  --size-5: 0.313rem;
+  --size-6: 0.375rem;
+  --size-8: 0.5rem;
+  --size-10: 0.625rem;
+  --size-11: 0.688rem;
+  --size-12: 0.75rem;
+  --size-13: 0.8125rem;
+  --size-14: 0.875rem;
+  --size-15: 0.9375rem;
+  --size-16: 1rem;
+  --size-18: 1.125rem;
+  --size-20: 1.25rem;
+  --size-22: 1.375rem;
+  --size-24: 1.5rem;
+  --size-27: 1.688rem;
+  --size-28: 1.75rem;
+  --size-30: 1.875rem;
+  --size-32: 2rem;
+  --size-34: 2.125rem;
+  --size-36: 2.25rem;
+  --size-38: 2.375rem;
+  --size-40: 2.5rem;
+  --size-45: 2.8125rem;
+  --size-46: 2.875rem;
+  --size-48: 3rem;
+  --size-50: 3.125rem;
+  --size-54: 3.375rem;
+  --size-56: 3.5rem;
+  --size-57: 3.563rem;
+  --size-59: 3.688rem;
+  --size-60: 3.75rem;
+  --size-64: 4rem;
+  --size-72: 4.5rem;
+  --size-80: 5rem;
+  --size-82: 5.125rem;
+  --size-96: 6rem;
+  --size-100: 6.25rem;
+  --size-112: 7rem;
+  --size-116: 7.25rem;
+  --size-124: 7.75rem;
+  --size--124: -7.75rem;
+  --size-128: 8rem;
+  --size-135: 8.4375rem;
+  --size-150: 9.375rem;
+  --size-151: 9.438rem;
+  --size-160: 10rem;
+  --size-168: 10.5rem;
+  --size-180: 11.25rem;
+  --size-192: 12rem;
+  --size-200: 12.5rem;
+  --size-212: 13.25rem;
+  --size-220: 13.75rem;
+  --size-224: 14rem;
+  --size-256: 16rem;
+  --size-278: 17.3rem;
+  --size-282: 17.625rem;
+  --size-300: 18.75rem;
+  --size-320: 20.563rem;
+  --size-384: 24rem;
+  --size-464: 29rem;
+  --size-512: 32rem;
+  --size-640: 40rem;
+  --size-768: 48rem;
+  --size-812: 50.75rem;
+
+  // Font size system
+  --font-size-10: 0.625rem;
+  --font-size-12: 0.75rem;
+  --font-size-14: 0.875rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-20: 1.25rem;
+  --font-size-24: 1.5rem;
+  --font-size-30: 1.875rem;
+  --font-size-32: 2rem;
+  --font-size-36: 2.25rem;
+  --font-size-48: 3rem;
+  --font-size-60: 3.75rem;
+  --font-size-72: 4.5rem;
+
+  // Colours
+  --brand-main: #560083;
+  --brand-yellow: #FFC210;
+  --main-bg: #260438;
+  --white: #fff;
+}
+
+$breakpoint-names: phone, tab-land, tab-port, desktop, big-desktop,
+  extra-big-desktop;
+// 320px
+$breakpoint-double-extra-small-phone: 20em !default;
+// 374px
+$breakpoint-extra-small-phone: 23.375em !default;
+// 400px
+$breakpoint-small-phone: 25em !default;
+// 600px
+$breakpoint-phone: 37.5em !default;
+// 768px
+$breakpoint-tab-land: 60em !default;
+// 992px
+$breakpoint-desktop: 64.0625em !default;
+// 1200px
+$breakpoint-big-desktop: 120em !default;
+// 1920px
+$breakpoint-extra-big-desktop: 120em !default;
+
+// Range: 320px - 992px
+$phone-landscape: 'screen and (orientation: landscape) and (min-width: 20.0625rem) and (max-width: 62rem)';
+
+$typography-sizes: xl, l, m, s, xs, xxs;

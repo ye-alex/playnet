@@ -6,11 +6,9 @@ import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { ROUTES } from './costants/routes';
 import { Services } from './pages/Services';
-import { Navigation } from './components/Navigation';
 
 const App: FC = () => (
   <div>
-    <Navigation />
     <Routes>
       <Route path={ROUTES.HOME} element={<Home />} />
       <Route path={ROUTES.BLOG} element={<Blog />} />

@@ -1,0 +1,48 @@
+@import '../../scss/media-queries';
+
+.footer {
+  z-index: 1;
+  height: 100vh;
+  position: relative;
+  top: calc(-1 * var(--size-224));
+  background: url('../../assets/footer-bg.png') center center no-repeat;
+  background-size: cover;
+
+  @include respond(big-desktop) {
+    top: calc(-1 * var(--size-384));
+  }
+
+  &__title-wrapper {
+    left: 50%;
+    width: 94%;
+    position: absolute;
+    text-align: center;
+    top: var(--size-100);
+    transform: translateX(-50%);
+
+    @include respond(phone-landscape) {
+      top: var(--size-50);
+    }
+  }
+
+  &__title {
+    color: var(--brand-main);
+    font-size: var(--size-22);
+    line-height: var(--size-32);
+
+    @include respond(tab-land) {
+      font-size: var(--size-28);
+    }
+  }
+
+  &__sub-title {
+    color: var(--white);
+    line-height: var(--size-32);
+    font-size: var(--font-size-24);
+
+    @include respond(tab-land) {
+      line-height: var(--size-64);
+      font-size: var(--font-size-48);
+    }
+  }
+}

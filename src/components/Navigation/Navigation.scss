@@ -1,0 +1,39 @@
+@import '../../scss/media-queries';
+
+.navigation {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  margin-left: var(--size-32);
+  
+  @include respond(tab-port) {
+    flex-direction: row;
+    padding-top: var(--size-12);
+  }
+
+  a {
+    width: 100%;
+    text-align: center;
+    padding: var(--size-12) 0;
+    color: var(--brand-main);
+    text-transform: uppercase;
+    font-size: var(--font-size-24);
+    border-bottom: 1px solid var(--white);
+
+    @include respond(tab-land) {
+      padding: 0 var(--size-32) 0 0;
+      border-bottom: none;
+      width: auto;
+    }
+
+    @include respond(big-desktop) {
+      font-size: var(--font-size-36);
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

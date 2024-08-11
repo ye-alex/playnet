@@ -1,0 +1,126 @@
+@import '../../scss/media-queries';
+
+.header {
+  width: 100%;
+  position: relative;
+  background: url('../../assets/header-bg3.jpg') center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  @include respond(phone-landscape) {
+    min-height: var(--size-512);
+  }
+
+  &__nav {
+    height: 0;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: var(--size-32) var(--size-12) var(--size-12);
+    transition: height 0.5s ease-out;
+    background: url('../../assets/menu-bg.png') center 250% no-repeat;
+    background-size: cover;
+
+    @include respond(tab-land) {
+      padding: var(--size-64) var(--size-24) var(--size-24);
+    }
+
+    .navigation {
+      opacity: 0;
+    }
+
+    svg {
+      line {
+        transition: stroke 0.5s ease-in;
+      }
+
+      rect,
+      path {
+        transition: fill 0.5s ease-in;
+      }
+    }
+
+    &--open {
+      z-index: 3;
+      height: 100vh;
+      position: relative;
+      transition: height 0.5s ease-in;
+
+      @include respond(phone-landscape) {
+        height: var(--size-812);
+      }
+
+      @include respond(tab-land) {
+        height: 30%;
+      }
+
+      svg {
+        line {
+          stroke: var(--brand-main);
+        }
+
+        rect,
+        path {
+          fill: var(--brand-main);
+        }
+      }
+
+      .navigation {
+        opacity: 1;
+        transition: opacity 1s ease-in;
+      }
+
+      .header {
+        &__right {
+          opacity: 0;
+
+          @include respond(tab-land) {
+            opacity: 1;
+          }
+        }
+
+        &__logo {
+          top: 50vh;
+          z-index: 2;
+
+          @include respond(phone-landscape) {
+            top: var(--size-384);
+          }
+
+          @include respond(tab-land) {
+            top: var(--size-150);
+          }
+        }
+      }
+    }
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  &__left {
+    flex: 1;
+  }
+
+  &__logo {
+    left: 50%;
+    position: absolute;
+    top: var(--size-150);
+    transform: translateX(-50%);
+    transition: top 0.5s ease-in;
+
+    img {
+      width: var(--size-180);
+
+      @include respond(tab-land) {
+        width: var(--size-320);
+      }
+    }
+  }
+}
