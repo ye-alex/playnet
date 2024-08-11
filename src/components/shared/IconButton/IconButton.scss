@@ -14,30 +14,59 @@
 
   &--small {
     font-size: 0.8125rem;
+    width: 0.8125rem;
+
+    svg {
+      width: 0.8125rem;
+    }
   }
 
   &--medium {
     font-size: var(--size-20);
+    width: var(--size-20);
+
+    svg {
+      width: var(--size-20);
+    }
   }
 
   &--large {
     font-size: var(--size-57);
+    width: var(--size-57);
+
+    svg {
+      width: var(--size-57);
+    }
   }
 
   &--x-large {
-    font-size: var(--size-48);
+    font-size: var(--size-32);
+    width: var(--size-32);
+
+    svg {
+      width: var(--size-32);
+    }
+
+    @include respond(tab-land){
+      font-size: var(--size-40);
+      width: var(--size-40);
+
+      svg {
+        width: var(--size-40);
+      }
+    }
 
     @include respond(big-desktop) {
-      font-size: var(--size-64);
+      font-size: var(--size-57);
+      width: var(--size-57);
+
+      svg {
+        width: var(--size-57);
+      }
     }
   }
 
   &--inherit {
     font-size: inherit;
-  }
-
-  svg {
-    width: 100%;
-    height: 100%;
   }
 }

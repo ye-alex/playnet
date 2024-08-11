@@ -19,7 +19,9 @@ export const NavigationTemplate: FC<Props> = ({ children, className }) => {
         <p>
           CONTACT <strong>Playnet Interactive</strong>
         </p>
-        <p className="navigation-template__email">hello@playnetinteractive.com</p>
+        <a href="mailto:hello@playnetinteractive.com" className="navigation-template__email">
+          hello@playnetinteractive.com
+        </a>
       </div>
       <p className="navigation-template__license">©Playnet Interactive 2024</p>
     </div>

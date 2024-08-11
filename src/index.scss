@@ -1,5 +1,7 @@
+@import './scss/fonts';
 @import './scss/scss-variables';
 @import './scss/media-queries';
+
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -143,4 +145,18 @@ table {
 }
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'WixMadeforDisplay-Bold', sans-serif;
+}
+
+p,
+a {
+  font-family: 'Unbounded-VariableFont', sans-serif;
 }
