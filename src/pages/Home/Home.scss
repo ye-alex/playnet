@@ -6,6 +6,11 @@
   &__content {
     color: var(--white);
     text-align: center;
+    margin-top: var(--size-32);
+
+    @include respond(tab-land) {
+      margin-top: var(--size-64);
+    }
 
     h2 {
       line-height: var(--size-48);
@@ -37,6 +42,10 @@
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-evenly;
+
+    @include respond(big-desktop) {
+      margin-bottom: var(--size-96);
+    }
   }
 
   &__img {
@@ -58,25 +67,6 @@
     left: 50%;
     top: var(--size-150);
     transform: translateX(-50%);
-    display: inline-block;
-    text-wrap: nowrap;
-    padding: var(--size-18) var(--size-64);
-    border-radius: var(--size-32);
-    background-color: var(--white);
-    color: var(--brand-main);
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: 2px solid var(--brand-main);
-    line-height: var(--size-24);
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease;
-
-    &:hover {
-      background-color: #a600ff;
-      color: var(--white);
-    }
 
     @include respond(phone-landscape) {
       top: var(--size-72);
@@ -89,10 +79,34 @@
 
   &__play {
     z-index: 0;
+    height: 100vh;
     top: calc(-1 * var(--size-128));
 
     @include respond(big-desktop) {
       top: calc(-1 * var(--size-282));
+    }
+  }
+
+  .footer {
+    top: calc(-1 * var(--size-224));
+
+    
+    @include respond(big-desktop) {
+      top: calc(-1 * var(--size-384));
+    }
+  }
+  
+  .navigation-template__contact {
+    margin-top: calc(-1 * var(--size-224));
+
+    @include respond(big-desktop) {
+      margin-top: calc(-1 * var(--size-384));
+    }
+  }
+
+  .content-section {
+    @include respond(phone-landscape) {
+      min-height: var(--size-512);
     }
   }
 }

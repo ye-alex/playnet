@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { Link } from 'react-router-dom';
 import ClickPlay from '../../assets/click-play.png';
 import BrandGame from '../../assets/SVG/services-ba.svg';
 import GameDev from '../../assets/SVG/services-gd.svg';
@@ -10,12 +9,12 @@ import BgImg from '../../assets/we-are-bg.png';
 import { NavigationTemplate } from '../../components/NavigationTemplate';
 import { Section } from '../../components/Section';
 import { IconText } from '../../components/shared/IconText';
-import { ROUTES } from '../../costants/routes';
+import { GetInTouchButton } from '../../components/shared/GetInTouchButton';
 import './Home.scss';
 
 export const Home: FC = () => {
   return (
-    <NavigationTemplate className="home">
+    <NavigationTemplate title="NEXT LEVEL GAME DEV" description="Welcome to Playnet Interactive" className="home">
       <img src={BgImg} alt="bg" className="home__img" />
       <Section>
         <div className="home__content">
@@ -38,9 +37,7 @@ export const Home: FC = () => {
         </div>
       </Section>
       <Section bgUrl={ClickPlay} className="home__play">
-        <Link className="home__link" to={ROUTES.CONTACT}>
-          Get in touch
-        </Link>
+        <GetInTouchButton className="home__link" />
         <div className="home__content">
           <h2>Click & Play</h2>
           <h5>

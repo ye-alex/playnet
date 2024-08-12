@@ -1,0 +1,67 @@
+@import '../../../scss/media-queries';
+
+.image-text {
+  display: flex;
+  align-items: center;
+  padding: var(--size-20);
+  color: var(--white);
+  flex-direction: column;
+
+  @include respond(tab-land) {
+    flex-direction: row;
+  }
+
+  &__text-content {
+    flex: 1;
+    padding: var(--size-20);
+    text-align: center;
+    order: 1;
+
+    @include respond(tab-land) {
+      text-align: end;
+    }
+
+    &--reverse {
+      order: 1;
+
+      @include respond(tab-land) {
+        order: 0;
+      }
+    }
+
+    h2 {
+      font-size: var(--font-size-32);
+      margin-bottom: var(--size-16);
+    }
+
+    p {
+      font-size: var(--size-16);
+      line-height: var(--size-24);
+    }
+  }
+
+  &__highlight {
+    color: var(--brand-orange);
+  }
+
+  &__image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 0;
+
+    &--reverse {
+      order: 0;
+
+      @include respond(tab-land) {
+        order: 1;
+      }
+    }
+
+    img {
+      width: 100%;
+      max-width: var(--size-464);
+    }
+  }
+}

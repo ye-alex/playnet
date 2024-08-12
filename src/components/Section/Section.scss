@@ -1,13 +1,7 @@
-@import '../../scss/media-queries';
-
 .content-section {
   z-index: 1;
+  height: 100%;
   display: flex;
-  min-height: 100vh;
   position: relative;
   align-items: center;
-
-  @include respond(phone-landscape) {
-    min-height: var(--size-512);
-  }
 }

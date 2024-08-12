@@ -23,11 +23,16 @@
     background-size: cover;
 
     @include respond(tab-land) {
-      padding: var(--size-64) var(--size-24) var(--size-24);
+      padding: var(--size-48) var(--size-24) var(--size-24);
+    }
+
+    @include respond(big-desktop) {
+      padding-top: var(--size-64);
     }
 
     .navigation {
       opacity: 0;
+      pointer-events: none;
     }
 
     svg {
@@ -68,28 +73,39 @@
 
       .navigation {
         opacity: 1;
+        pointer-events: all;
         transition: opacity 1s ease-in;
       }
 
       .header {
         &__right {
           opacity: 0;
+          transition: opacity 0.25s ease-out;
 
           @include respond(tab-land) {
             opacity: 1;
           }
         }
 
-        &__logo {
+        &__logo-wrapper {
           top: 50vh;
-          z-index: 2;
+          z-index: 6;
+          transition: top 0.5s ease-in;
 
           @include respond(phone-landscape) {
-            top: var(--size-384);
+            top: 384px;
           }
 
           @include respond(tab-land) {
-            top: var(--size-150);
+            top: 120px;
+          }
+        }
+
+        &__title {
+          opacity: 0;
+
+          @include respond(tab-land) {
+            opacity: 1;
           }
         }
       }
@@ -102,24 +118,80 @@
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
+    z-index: 5;
   }
 
   &__left {
     flex: 1;
   }
 
-  &__logo {
-    left: 50%;
+  &__logo-wrapper {
+    left: 0;
+    width: 100%;
+    text-align: center;
     position: absolute;
-    top: var(--size-150);
-    transform: translateX(-50%);
+    z-index: 2;
+    top: 80px;
     transition: top 0.5s ease-in;
 
     img {
       width: var(--size-180);
 
       @include respond(tab-land) {
+        width: var(--size-282);
+      }
+
+      @include respond(big-desktop) {
         width: var(--size-320);
+      }
+    }
+  }
+
+  &__logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__title {
+    width: 100%;
+    opacity: 1;
+    text-align: center;
+    color: var(--white);
+    transition: top 0.5s ease-in;
+
+    h1 {
+      line-height: var(--size-32);
+      font-size: var(--font-size-24);
+      margin-top: var(--size-64);
+      margin-bottom: var(--size-12);
+
+      @include respond(tab-land) {
+        line-height: var(--size-64);
+        font-size: var(--font-size-48);
+        margin-top: var(--size-48);
+      }
+
+      @include respond(big-desktop) {
+        line-height: var(--size-72);
+        font-size: var(--font-size-72);
+        margin-bottom: var(--size-32);
+      }
+    }
+
+    p {
+      line-height: var(--size-24);
+      font-size: var(--font-size-18);
+
+      @include respond(tab-land) {
+        line-height: var(--size-32);
+        font-size: var(--font-size-24);
+      }
+
+      @include respond(big-desktop) {
+        line-height: var(--size-48);
+        font-size: var(--font-size-32);
       }
     }
   }

@@ -4,13 +4,8 @@
   z-index: 1;
   height: 100vh;
   position: relative;
-  top: calc(-1 * var(--size-224));
   background: url('../../assets/footer-bg.png') center center no-repeat;
   background-size: cover;
-
-  @include respond(big-desktop) {
-    top: calc(-1 * var(--size-384));
-  }
 
   &__title-wrapper {
     left: 50%;
