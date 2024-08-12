@@ -1,5 +1,5 @@
-import emailjs from 'emailjs-com';
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import { NavigationTemplate } from '../../components/NavigationTemplate';
 import { Section } from '../../components/Section';
@@ -29,8 +29,7 @@ export const Contact: FC = () => {
       .send(
         `${process.env.REACT_APP_EMAIL_SERVICE_ID}`,
         `${process.env.REACT_APP_EMAIL_TRMPLATE_ID}`,
-        data as unknown as Record<string, unknown>,
-        'user_RnnFaOANi8yXd30WR'
+        data as unknown as Record<string, unknown>
       )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
@@ -48,6 +47,20 @@ export const Contact: FC = () => {
         });
       });
   };
+
+  useEffect(() => {
+    emailjs.init({
+      publicKey: `${process.env.REACT_APP_EMAIL_PUBLIC_KEY}`,
+      // Do not allow headless browsers
+      blockHeadless: true,
+      limitRate: {
+        // Set the limit rate for the application
+        id: 'app',
+        // Allow 1 request per 10s
+        throttle: 10000,
+      },
+    });
+  }, []);
 
   return (
     <NavigationTemplate className="contact" title="CONTACT" description="GET IN TOUCH">
