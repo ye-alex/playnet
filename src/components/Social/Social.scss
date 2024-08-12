@@ -1,7 +1,8 @@
 @import '../../scss//media-queries';
 
 .social {
-  display: flex;
+  // temporary solution
+  display: none;
   flex-direction: column;
 
   @include respond(tab-port) {
