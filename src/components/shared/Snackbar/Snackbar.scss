@@ -1,0 +1,21 @@
+@import '../../../scss/media-queries';
+
+.snackbar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 9;
+
+  @include respond(tab-port) {
+    width: calc((100% / 8) * 6);
+  }
+
+  @include respond(desktop) {
+    width: calc((100% / 12) * 6);
+  }
+
+  @include respond(extra-big-desktop) {
+    width: calc((100% / 24) * 8);
+  }
+}
