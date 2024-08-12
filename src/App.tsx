@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { Blog } from './pages/Blog';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { ROUTES } from './costants/routes';
@@ -11,10 +10,10 @@ const App: FC = () => (
   <div>
     <Routes>
       <Route path={ROUTES.HOME} element={<Home />} />
-      <Route path={ROUTES.BLOG} element={<Blog />} />
       <Route path={ROUTES.ABOUT} element={<About />} />
       <Route path={ROUTES.CONTACT} element={<Contact />} />
       <Route path={ROUTES.SERVICES} element={<Services />} />
+      <Route path="*" element={<Navigate to={ROUTES.HOME} replace />} />
     </Routes>
   </div>
 );
