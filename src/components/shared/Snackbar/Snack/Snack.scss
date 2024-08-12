@@ -1,14 +1,6 @@
 @import '../../../../scss/media-queries';
 
 .snack {
-  &__container {
-    margin: var(--size-16);
-  }
-
-  img {
-    width: var(--size-16);
-  }
-
   align-items: center;
   background-color: var(--white);
   border-radius: 4px;
@@ -23,6 +15,14 @@
   padding: var(--size-16);
   transition: 0;
   user-select: none;
+
+  &__container {
+    margin: var(--size-16);
+  }
+
+  img {
+    width: var(--size-16);
+  }
 
   &--dark {
     color: var(--white);
