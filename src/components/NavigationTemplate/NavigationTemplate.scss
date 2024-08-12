@@ -14,22 +14,21 @@
   }
 
   &__contact {
-    left: 50%;
-    width: 94%;
-    position: absolute;
+    z-index: 2;
+    position: relative;
     text-align: center;
-    bottom: var(--size-124);
-    transform: translateX(-50%);
     color: var(--white);
     line-height: var(--size-48);
     font-size: var(--font-size-20);
+    padding: var(--size-24);
+    margin-bottom: var(--size-82);
+    margin-top: calc(-1 * var(--size-45));
 
     @include respond(tab-land) {
       font-size: var(--size-28);
     }
 
     @include respond(big-desktop) {
-      bottom: var(--size-256);
       font-size: var(--size-32);
     }
   }
@@ -37,7 +36,7 @@
   &__email {
     font-weight: bold;
     color: var(--brand-yellow);
-    font-size: var(--size-24);
+    font-size: var(--size-18);
 
     @include respond(tab-land) {
       font-size: var(--font-size-32);

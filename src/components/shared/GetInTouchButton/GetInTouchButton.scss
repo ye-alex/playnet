@@ -1,0 +1,21 @@
+.get-in-touch {
+  display: inline-block;
+  text-wrap: nowrap;
+  padding: var(--size-18) var(--size-64);
+  border-radius: var(--size-32);
+  background-color: var(--white);
+  color: var(--brand-main);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid var(--brand-main);
+  line-height: var(--size-24);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background-color: #a600ff;
+    color: var(--white);
+  }
+}
